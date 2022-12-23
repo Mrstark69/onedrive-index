@@ -138,21 +138,9 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
               clipboard.copy(`${getBaseUrl()}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)
               toast.success(t('Copied direct link to clipboard.'))
             }}
-            btnColor="pink"
-            btnText={t('Copy direct link')}
+            btnColor="blue"
+            btnText={t('Copy Direct Link')}
             btnIcon="copy"
-          />
-
-          <DownloadButton
-            onClickCallback={() => window.open(`vlc://${getBaseUrl()}${videoUrl}`)}
-            btnText="VLC"
-            btnImage="/players/vlc.png"
-          />
-          
-          <DownloadButton
-            onClickCallback={() => window.open(`nplayer-http://${window?.location.hostname ?? ''}${videoUrl}`)}
-            btnText="nPlayer"
-            btnImage="/players/nplayer.png"
           />
         </div>
       </DownloadBtnContainer>

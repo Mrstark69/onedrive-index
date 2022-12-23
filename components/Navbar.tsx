@@ -14,7 +14,7 @@ import siteConfig from '../config/site.config'
 import SearchModal from './SearchModal'
 import useDeviceOS from '../utils/useDeviceOS'
 
-const Navbar = () => {
+  const Navbar = () => {
   const router = useRouter()
   const os = useDeviceOS()
 
@@ -87,28 +87,6 @@ const Navbar = () => {
               <div className="rounded-lg bg-gray-200 px-2 py-1 text-xs font-medium dark:bg-gray-700">K</div>
             </div>
           </button>
-
-          <SwitchLang />
-
-          {siteConfig.links.length !== 0 &&
-            siteConfig.links.map((l: { name: string; link: string }) => (
-              <a
-                key={l.name}
-                href={l.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 hover:opacity-80 dark:text-white"
-              >
-                <FontAwesomeIcon icon={['fab', l.name.toLowerCase() as IconName]} />
-                <span className="hidden text-sm font-medium md:inline-block">
-                  {
-                    // Append link name comments here to add translations
-                    // t('Weibo')
-                    t(l.name)
-                  }
-                </span>
-              </a>
-            ))}
 
           {siteConfig.email && (
             <a href={siteConfig.email} className="flex items-center space-x-2 hover:opacity-80 dark:text-white">

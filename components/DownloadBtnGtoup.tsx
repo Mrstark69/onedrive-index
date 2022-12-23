@@ -90,13 +90,7 @@ const DownloadButtonGroup = () => {
           btnColor="pink"
           btnText={t('Copy direct link')}
           btnIcon="copy"
-          btnTitle={t('Copy the permalink to the file to the clipboard')}
-        />
-        <DownloadButton
-          onClickCallback={() => setMenuOpen(true)}
-          btnColor="teal"
-          btnText={t('Customise link')}
-          btnIcon="pen"
+          btnTitle={t('Copy the link to the file to the clipboard')}
         />
       </div>
     </>
